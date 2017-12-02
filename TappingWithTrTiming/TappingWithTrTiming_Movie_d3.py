@@ -38,7 +38,7 @@ params = {
     'promptDir': 'Text/',  # directory containing prompts and questions files
 # declare display parameters
     'fullScreen': True,       # run in full screen mode?
-    'screenToShow': 0,        # display on primary screen (0) or secondary (1)? # Renzo hats auf null gesetzt
+    'screenToShow': 1,        # display on primary screen (0) or secondary (1)? # Renzo hats auf null gesetzt
     'fixCrossSize': 100,       # size of cross, in pixels
     'movieSize': (800,500), # size of image in pixels # Renzo hat te zahlen verdoppelt
     'fixCrossPos': [0,0],     # (x,y) pos of fixation cross displayed before each stimulus (for gaze drift correction)

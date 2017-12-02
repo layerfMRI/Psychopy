@@ -12,6 +12,7 @@ import AppKit
 def screenRes(myScreen):
     screens = AppKit.NSScreen.screens() # get list of screen objects
     screenRes = (int(screens[myScreen].frame().size.width), int(screens[myScreen].frame().size.height))
+    #screenRes = [800,600]
     print "screenRes = [%d,%d]"%screenRes 
     return screenRes
 
