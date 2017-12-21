@@ -48,7 +48,7 @@ params = {
     'testDur': 2.0,             # time when test stimulus is presented (in seconds)
     'minISI': 16.0,#11.0,#              # min time between when one stimulus disappears and the next appears (in seconds)
     'maxISI': 16.0,#11.0,#              # max time between when one stimulus disappears and the next appears (in seconds)
-    'tStartup': 8.0,#10.0,#            # pause time before starting first stimulus
+    'tStartup': 0.0,#10.0,#            # pause time before starting first stimulus
     'tCoolDown': 8.0,#10.0,#           # pause time after end of last stimulus before "the end" text
     'triggerKey': '5',          # key from scanner that says scan is starting
     'respKeys': ['1','2','3','4','6'],           # keys to be used for responses (mapped to positions 1,2,3,4,5)

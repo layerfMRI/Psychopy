@@ -5,13 +5,13 @@ V/Users/huberl/Documents/Programme_und_Grafik/Psychopy/TappingWithTrTiming/Pickl
 p3
 sS'session'
 p4
-I4
+I10
 sS'skipPrompts'
 p5
 I00
 sS'condition'
 p6
-VTapRight
+VTapLeft
 p7
 sS'subject'
 p8
