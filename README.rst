@@ -37,11 +37,4 @@ t getit back on screen,
     :target: https://github.com/layerfMRI/Psychopy/blob/master/readme/window_isgone.png
     :alt: screenshot of zoomed window
 
-<<<<<<< HEAD
-Now, in your notebook you will be able to access your data on the path `/data`
-=======
-.. image:: https://github.com/layerfMRI/Psychopy/blob/master/readme/window_isgone.png
-    :target: https://github.com/layerfMRI/Psychopy/blob/master/readme/window_isgone.png
-    :alt: screenshot of zoomed window
-  
->>>>>>> ac1ceaafdb2e0ff764579107d01d64faf1f0e69e
+
