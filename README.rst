@@ -35,3 +35,4 @@ t getit back on screen,
 .. image:: https://github.com/layerfMRI/Psychopy/blob/master/readme/window_isgone.png
     :target: https://github.com/layerfMRI/Psychopy/blob/master/readme/window_isgone.png
     :alt: screenshot of zoomed window
+  
