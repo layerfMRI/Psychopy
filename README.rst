@@ -1,11 +1,8 @@
 .. -*- mode: rst -*-
 
-.. image:: https://travis-ci.org/nighres/nighres.svg?branch=master
-    :target: https://travis-ci.org/nighres
-    :alt: Travis CI build status
-.. image:: https://readthedocs.org/projects/nighres/badge/?version=latest
-    :target: http://nighres.readthedocs.io/en/latest/?badge=latest
-    :alt: Documentation Status
+.. image:: https://github.com/layerfMRI/Psychopy/blob/master/readme/window_isgone.png
+    :target: https://github.com/layerfMRI/Psychopy/blob/master/readme/window_isgone.png
+    :alt: screenshot of zoomed window
 
 Nighres
 =======
