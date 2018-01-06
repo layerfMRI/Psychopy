@@ -1,51 +1,41 @@
 .. -*- mode: rst -*-
 
+.. image:: https://github.com/layerfMRI/Psychopy/blob/master/readme/icon.png
+    :target: https://github.com/layerfMRI/Psychopy/blob/master/readme/icon.png
+    :alt: Renzos simple Psychopy programs
+    
+These Programs are mostly optimices for application on a Mac laptop with an external projector. 
+
+
+Setup 
+======
+
+Psychopy installation::
+
+http://www.psychopy.org/installation.html
+https://sourceforge.net/projects/psychpy/files/latest/download?source=files
+
+Customizing Phsychopy::
+
+Include Path of GeneralTools in Phsychopy→Perferences→General→paths:
+    [u'absolutePathToGeneralToolsFolder']
+
+The main File is: The file to run with Psychopy it “TappingWithTrTiming_Movie_d3.pyc”
+The prompt text is given in: subfolder
+
+Comment on frame rate (tapping frequency and flickering frequency)::
+The frame rates of the different tapping frequencies. Are given on Line 50. 
+Note, he speed maxes out at arronf 0.3 Hz. I.h. any value above 30 will appear slower.
+
+Fix for lost window::
+Sometimes in mac the wondow is of screen:
+t getit back on screen, 
+1.) select the program in the task bar.
+2.) in the top bar go to Window → zoom.
+
 .. image:: https://github.com/layerfMRI/Psychopy/blob/master/readme/window_isgone.png
     :target: https://github.com/layerfMRI/Psychopy/blob/master/readme/window_isgone.png
     :alt: screenshot of zoomed window
-
-Nighres
-=======
-
-Nighres is a Python package for processing of high-resolution neuroimaging data.
-It developed out of `CBS High-Res Brain Processing Tools
-<https://www.cbs.mpg.de/institute/software/cbs-tools>`_ and aims to make those
-tools easier to install, use and extend.
-
-Because parts of the package have to be built locally it is currently not possible to use ``pip install`` directly from PyPI. Instead, please follow the installation instructions provided at http://nighres.readthedocs.io/en/latest/installation.html
-
-Currently, Nighres is developed and tested on Linux Ubuntu Trusty and Python 2.7. We hope to support all common Unix platforms and Python 3 soon.
-
-
-Docker
-======
-
-To quickly try out nighres in a preset, batteries-included environment, you can use the
-included Dockerfile, which includes Ubuntu 14 Trusty, openJDK-8, nighres, and Jupyter
-Notebook. The only thing you need to install is `Docker <https://www.docker.com/>`_, a
-lightweight container platform that runs on Linux, Windows and Mac OS X.
-
-To build the Docker image, do the following::
-
-    git clone https://github.com/nighres/nighres
-    cd nighres
-    docker build . -t nighres
-
-To run the Docker container::
-
-    docker run --rm -p 8888:8888 nighres
-
-Now go with your browser to https://localhost:8888 to start a notebook. You should be able
-to import nighres by entering::
-
-    import nighres
-
-into the first cell of your notebook.
-
-Usually you also want to have access to some data when you run nighres. You can grant the Docker container
-access to a data folder on your host OS by using the `-v` tag when you start the container::
-
-    docker run --rm -v /home/me/my_data:/data -p 8888:8888 nighres
 
 <<<<<<< HEAD
 Now, in your notebook you will be able to access your data on the path `/data`
