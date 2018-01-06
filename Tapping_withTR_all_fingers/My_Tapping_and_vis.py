@@ -107,10 +107,14 @@ Instr_Rest_T='experiment will start shortly';
 Instr_Rest_GRAPPA= 'do\'t move for a moment';
 Instr_Rest_GRAPPA1= 'GRAPPA ref line acq';
 Instr_Rest_WAIT= 'initial buffer'; # for initial rest
-Instr_TAP='left LITTLE FINGER';
-Instr_TAP1='left LITTLE FINGER';
-Instr_TAP2='left LITTLE FINGER';
 Instr_RELAX='left INDEX FINGER';
+Instr_TAP='left MIDDLE FINGER';
+Instr_TAP1='left RING FINGER';
+Instr_TAP2='left LITTLE FINGER';
+#Instr_RELAX='left INDEX FINGER';
+#Instr_TAP='left MIDDLE FINGER';
+#Instr_TAP1='left RING FINGER';
+#Instr_TAP2='left LITTLE FINGER';
 Instr_DONE='Finished \nThank you';
 
 
@@ -187,13 +191,31 @@ while numbtrials<numTrials:
         event.waitKeys(keyList=['t'])
         numbtrigger=numbtrigger+1
     numbtrigger=0
+    while numbtrigger<restDur:
+        for keys in event.getKeys(timeStamped=True):            #handle key presses each frame
+            if keys[0]in ['escape','q']:
+                win.close()
+                core.quit()
+        Instr_TAP.draw();win.flip();
+        event.waitKeys(keyList=['t'])
+        numbtrigger=numbtrigger+1
+    numbtrigger=0
+    while numbtrigger<restDur:
+        for keys in event.getKeys(timeStamped=True):            #handle key presses each frame
+            if keys[0]in ['escape','q']:
+                win.close()
+                core.quit()
+        Instr_TAP1.draw();win.flip();
+        event.waitKeys(keyList=['t'])
+        numbtrigger=numbtrigger+1
+    numbtrigger=0
     while numbtrigger<visStimDur:
         for keys in event.getKeys(timeStamped=True):            #handle key presses each frame
                 if keys[0]in ['escape','q']:
                     win.close()
                     core.quit()
         #stimBCent.draw();win.flip();
-        Instr_TAP.draw();win.flip();
+        Instr_TAP2.draw();win.flip();
         event.waitKeys(keyList=['t'])
         
         numbtrigger=numbtrigger+1

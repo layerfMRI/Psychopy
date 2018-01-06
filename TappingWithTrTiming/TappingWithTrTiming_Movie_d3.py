@@ -50,7 +50,7 @@ stimList = {
     'conditionList':['TapRight','TapFast','TapLeft','AlmostRight','ImagineRight','sensationOnly','vis'],
     'moviePromptList': ['Tap along with the video.','Tap along with the video.','Tap along with the video.','Move (Right Hand) but do NOT touch fingers \nAlong with the video.','Imagine Tapping (Right Hand).','feel the hand','look at the center'],
     'moviePrefixList': ['right','right','left','right_almost','right_imagine','right_sensation','visual'], # filenames of movies
-    'movieFrameRateList': [10, 30, 30, 10, 1,1,40], # frame rate of each movie (s)
+    'movieFrameRateList': [10, 30, 30, 10, 1,1,8], # frame rate of each movie (s)
     'movieNFrameList':[10, 10, 10, 10, 1,1,2], # nFrames in each movie (numbered from 0 to nFrames-1
     'promptFileList': ['TappingPrompts_Movie.txt','TappingPrompts_Movie.txt','TappingPrompts_Movie.txt','AlmostPrompts_Movie.txt','ImaginePrompts_Movie.txt','SensationPrompts_Movie.txt','VisPrompts_Movie.txt'] # Name of text file containing prompts 
 }
