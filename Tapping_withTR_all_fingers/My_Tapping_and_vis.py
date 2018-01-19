@@ -26,8 +26,8 @@ autoScreenSize = True
 outputPrefix   = 'output'
 numTrials=48                                              #Number of trials of stimulation+rest blocks
 bufferDur=0                                              #Duration of additional fixation period immediately after scan starts and following last rest block [TRs]
-visStimDur=20                                           #Duration of flickering checkerboard blocks
-restDur=20
+visStimDur=12                                           #Duration of flickering checkerboard blocks
+restDur=12
 
 defaultScreenRes = [800,600]
 # Ask user
@@ -107,10 +107,12 @@ Instr_Rest_T='experiment will start shortly';
 Instr_Rest_GRAPPA= 'do\'t move for a moment';
 Instr_Rest_GRAPPA1= 'GRAPPA ref line acq';
 Instr_Rest_WAIT= 'initial buffer'; # for initial rest
-Instr_RELAX='left INDEX FINGER';
-Instr_TAP='left MIDDLE FINGER';
-Instr_TAP1='left RING FINGER';
-Instr_TAP2='left LITTLE FINGER';
+Instr_RELAX='RELAXING';
+Instr_TAP1='left INDEX FINGER';
+Instr_TAP2='left MIDLE FINGER';
+Instr_TAP3='left RING FINGER';
+Instr_TAP4='left LITTLE FINGER';
+
 #Instr_RELAX='left INDEX FINGER';
 #Instr_TAP='left MIDDLE FINGER';
 #Instr_TAP1='left RING FINGER';
@@ -122,9 +124,10 @@ Instr_Rest_S=visual.TextStim(win,text=Instr_Rest_T,height=50,units='pix',name='i
 Instr_Rest_GRAPPA=visual.TextStim(win,text=Instr_Rest_GRAPPA,height=50,units='pix',name='intro', color='black',wrapWidth=600,pos=(0,0));
 Instr_Rest_GRAPPA1=visual.TextStim(win,text=Instr_Rest_GRAPPA1,height=10,units='pix',name='intro', color='black',wrapWidth=600,pos=(0,-100));
 Instr_Rest_WAIT=visual.TextStim(win,text=Instr_Rest_WAIT,height=10,units='pix',name='intro', color='black',wrapWidth=600,pos=(0,-100));
-Instr_TAP=visual.TextStim(win,text=Instr_TAP,height=100,units='pix',name='intro', color='black',wrapWidth=600,pos=(0,0));
-Instr_TAP2=visual.TextStim(win,text=Instr_TAP2,height=100,units='pix',name='intro', color='black',wrapWidth=600,pos=(0,0));
 Instr_TAP1=visual.TextStim(win,text=Instr_TAP1,height=100,units='pix',name='intro', color='black',wrapWidth=600,pos=(0,0));
+Instr_TAP2=visual.TextStim(win,text=Instr_TAP2,height=100,units='pix',name='intro', color='black',wrapWidth=600,pos=(0,0));
+Instr_TAP3=visual.TextStim(win,text=Instr_TAP3,height=100,units='pix',name='intro', color='black',wrapWidth=600,pos=(0,0));
+Instr_TAP4=visual.TextStim(win,text=Instr_TAP4,height=100,units='pix',name='intro', color='black',wrapWidth=600,pos=(0,0));
 Instr_RELAX=visual.TextStim(win,text=Instr_RELAX,height=100,units='pix',name='intro', color='black',wrapWidth=600,pos=(0,0));
 Instr_DONE=visual.TextStim(win,text=Instr_DONE,height=100,units='pix',name='intro', color='black',wrapWidth=600,pos=(0,0));
 
@@ -196,7 +199,7 @@ while numbtrials<numTrials:
             if keys[0]in ['escape','q']:
                 win.close()
                 core.quit()
-        Instr_TAP.draw();win.flip();
+        Instr_TAP1.draw();win.flip();
         event.waitKeys(keyList=['t'])
         numbtrigger=numbtrigger+1
     numbtrigger=0
@@ -205,7 +208,16 @@ while numbtrials<numTrials:
             if keys[0]in ['escape','q']:
                 win.close()
                 core.quit()
-        Instr_TAP1.draw();win.flip();
+        Instr_TAP2.draw();win.flip();
+        event.waitKeys(keyList=['t'])
+        numbtrigger=numbtrigger+1
+    numbtrigger=0
+    while numbtrigger<restDur:
+        for keys in event.getKeys(timeStamped=True):            #handle key presses each frame
+            if keys[0]in ['escape','q']:
+                win.close()
+                core.quit()
+        Instr_RELAX.draw();win.flip();
         event.waitKeys(keyList=['t'])
         numbtrigger=numbtrigger+1
     numbtrigger=0
@@ -215,9 +227,19 @@ while numbtrials<numTrials:
                     win.close()
                     core.quit()
         #stimBCent.draw();win.flip();
-        Instr_TAP2.draw();win.flip();
+        Instr_TAP3.draw();win.flip();
         event.waitKeys(keyList=['t'])
-        
+        numbtrigger=numbtrigger+1
+    numbtrigger=0
+    while numbtrigger<visStimDur:
+        for keys in event.getKeys(timeStamped=True):            #handle key presses each frame
+                if keys[0]in ['escape','q']:
+                    win.close()
+                    core.quit()
+        #stimBCent.draw();win.flip();
+        Instr_TAP4.draw();win.flip();
+        event.waitKeys(keyList=['t'])
+
         numbtrigger=numbtrigger+1
 
 numbtrigger=0
