@@ -1,6 +1,9 @@
 Version fom Dec. 5th 2017
 go it from Emily 
-Dave wrote most of it?!?
+Dave wrote most of first version?!?
+All of the new changes are from Emily, I think
+
+Instructions to me are below
 
 ///it uses 12345 as input parameters
 
