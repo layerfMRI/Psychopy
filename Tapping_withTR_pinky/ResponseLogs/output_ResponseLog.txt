@@ -1,0 +1,7 @@
+0.4655 	WARNING 	Movie2 stim could not be imported and won't be available
+0.0149 	DATA 	INITIAL INSTRUCTIONS
+0.8691 	DATA 	Keypress: t
+0.8812 	WARNING 	t of last frame was 866.22ms (=1/1)
+1.2693 	DATA 	Keypress: t
+1.4408 	DATA 	Keypress: escape
+2.5908 	DATA 	Keypress: t

@@ -1,4 +1,4 @@
-
+ttt
 #!t/usr/bin/envt pythonwn
 from psychopy import core, visual, event, gui, logging
 #Renzo setup for first ecperimenteeeenbegqr

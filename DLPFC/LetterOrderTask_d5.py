@@ -23,10 +23,10 @@ import random, string # for randomization of trials, letters
 # ====================== #
 # Save the parameters declared below?
 saveParams = False
-newParamsFilename = 'LetterOrder_20trialRUN.pickle' # 'LetterOrderParams.pickle' # 'LetterOrder_10mRUN.pickle' #
+newParamsFilename = 'LetterOrder_20trialRUN_TR2p5.pickle' # 'LetterOrderParams.pickle' # 'LetterOrder_10mRUN.pickle' #
 
 # Set this to "True" if you are doing functional localizer, "False" to do full run
-isLoc = True
+isLoc = False
 
 # Set this to "True" to test contrast ALPHA vs REMEM (all go trials)
 # Set this to "False" to test contrast GO vs NO-GO (all alpha trials)
@@ -38,18 +38,18 @@ pseudorandTrialOrder = np.array([1,0,0,0,1,1,0,1,0,0,1,1,1,0,1,0,0,0,1,1])
 params = {
 # Declare stimulus and response parameters
 #    'nTrials': 12,             # number of trials in this session
-    'sessionDur': 656.0,#600.0,#          # max duration of this session, including warm-up and cool-down (in seconds)
+    'sessionDur': 820.0,#600.0,#          # max duration of this session, including warm-up and cool-down (in seconds)
     'nLetters': 5,              # number of letters in the string
-    'stringDur': 2.5,           # time string is on screen (sec)
-    'pauseDur': 1.5,            # time between string and cue (sec)
-    'cueDur': 1.0,              # time instructions (remember/alphabetize) are on screen (sec)
-    'minDelayDur': 9.0,        # minimum duration of cue-resp delay (seconds)
-    'maxDelayDur': 9.0,        # maximum duration of cue-resp delay (seconds)
-    'testDur': 2.0,             # time when test stimulus is presented (in seconds)
-    'minISI': 16.0,#11.0,#              # min time between when one stimulus disappears and the next appears (in seconds)
-    'maxISI': 16.0,#11.0,#              # max time between when one stimulus disappears and the next appears (in seconds)
-    'tStartup': 8.0,#10.0,#            # pause time before starting first stimulus
-    'tCoolDown': 8.0,#10.0,#           # pause time after end of last stimulus before "the end" text
+    'stringDur': 3.125,           # time string is on screen (sec)
+    'pauseDur': 1.875,            # time between string and cue (sec)
+    'cueDur': 1.25,              # time instructions (remember/alphabetize) are on screen (sec)
+    'minDelayDur': 11.25,        # minimum duration of cue-resp delay (seconds)
+    'maxDelayDur': 11.25,        # maximum duration of cue-resp delay (seconds)
+    'testDur': 2.5,             # time when test stimulus is presented (in seconds)
+    'minISI': 20.0,#11.0,#              # min time between when one stimulus disappears and the next appears (in seconds)
+    'maxISI': 20.0,#11.0,#              # max time between when one stimulus disappears and the next appears (in seconds)
+    'tStartup': 10.0,#10.0,#            # pause time before starting first stimulus
+    'tCoolDown': 10.0,#10.0,#           # pause time after end of last stimulus before "the end" text
     'triggerKey': '5',          # key from scanner that says scan is starting
     'respKeys': ['1','2','3','4','6'],           # keys to be used for responses (mapped to positions 1,2,3,4,5)
     'cues':['REMEMBER','ALPHABETIZE'], # strings of instructions for each condition (remember, alphabetize)
@@ -97,7 +97,7 @@ except: # if not there then use a default set
 if saveParams:
     expInfo['paramsFile'] = [newParamsFilename,'LetterOrder_20trialRUN.pickle','LetterOrder_6mLOC.pickle', 'Load...']
 else:
-    expInfo['paramsFile'] = ['LetterOrder_20trialRUN.pickle','LetterOrder_6mLOC.pickle', 'Load...']
+    expInfo['paramsFile'] = ['LetterOrder_20trialRUN.pickle','LetterOrder_20trialRUN_TR2p5.pickle','LetterOrder_6mLOC.pickle', 'Load...']
 
 #present a dialogue to change select params
 dlg = gui.DlgFromDict(expInfo, title=scriptName, order=['subject','session','skipPrompts','paramsFile'])
