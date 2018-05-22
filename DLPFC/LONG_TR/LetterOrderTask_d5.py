@@ -2,6 +2,7 @@
 """Display a string of letters to the subject, then ask them whether a certain letter 
 is at a certain position in the sequence. On some trials, ask them to alphabetize the 
 letters in their head."""
+# this is for the long TR
 # LetterOrderTask_d1.py
 # Created 10/05/17 by DJ based on SampleExperiment_d1.py
 # Updated 10/24/17 by DJ - fixed basename, random doubles, logging, escape keys at end
