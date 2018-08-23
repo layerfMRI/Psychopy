@@ -42,9 +42,9 @@ from psychopy.visual import DotStim
 
 # Read values from the user GUI
 if myFields.get('Monitor')=='Laptop':
-    screen_to_show=0
+    screen_to_show=1
 else:
-    screen_to_show=0
+    screen_to_show=1
 
 screenSize=[0,0]
 if myFields.get('Auto Screen Size Detection')=='No':

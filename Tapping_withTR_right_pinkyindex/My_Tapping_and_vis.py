@@ -42,9 +42,9 @@ from psychopy.visual import DotStim
 
 # Read values from the user GUI
 if myFields.get('Monitor')=='Laptop':
-    screen_to_show=0
+    screen_to_show=1
 else:
-    screen_to_show=0
+    screen_to_show=1
 
 screenSize=[0,0]
 if myFields.get('Auto Screen Size Detection')=='No':
@@ -108,8 +108,8 @@ Instr_Rest_GRAPPA= 'do\'t move for a moment';
 Instr_Rest_GRAPPA1= 'GRAPPA ref line acq';
 Instr_Rest_WAIT= 'initial buffer'; # for initial rest
 Instr_RELAX='RELAXING';
-Instr_FLEX='left FLEXION (compress)';
-Instr_EXTE='left EXTENSION (spread out)';
+Instr_FLEX='right index finger tapping';
+Instr_EXTE='right pinky finger tapping';
 
 
 #Instr_RELAX='left INDEX FINGER';
